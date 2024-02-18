@@ -3,6 +3,8 @@ package com.coderscampus.SpringSecurityJWTDemo.domain;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -18,6 +20,7 @@ public class Restaurant {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	private String name;
+	@JsonIgnore
 	@OneToMany(mappedBy = "restaurant", cascade = CascadeType.PERSIST)
     private List<Review> reviews = new ArrayList<>();
 

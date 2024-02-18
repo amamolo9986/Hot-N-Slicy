@@ -34,7 +34,7 @@ body{
     align-items: end;
 }
 #review-box {
-    height: 55px; 
+    height: 120px; 
     width: 600px;
     overflow-y: auto;
     padding-top: .5em;
@@ -58,12 +58,13 @@ body{
     border: 1px black solid;
     margin-top: 10px;
     font-family: 'JetBrains Mono'; 
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: white;
     cursor: pointer;
 }
 #deleteButton:hover{
     background-color: #C84C4C;
+    border: 1px #C84C4C solid;
 }
 #rrURL{
     color: #C84C4C;
@@ -71,4 +72,31 @@ body{
 }
 #rrURL:hover{
     text-decoration: underline;
+}
+#updateForm{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+#updateInput{
+    width: 300px;
+    border: 1px solid #a2a2a2;
+    background-color: #f7f7f7;
+    -webkit-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.75);
+    border-radius: 2px;
+}
+#updateButton{
+    border: 1px black solid;
+    font-family: 'JetBrains Mono'; 
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+#updateButton:hover{
+    background-color: white;
+    color: black;
+    border: 1px black solid;
 }

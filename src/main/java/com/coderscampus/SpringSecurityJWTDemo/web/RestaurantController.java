@@ -28,14 +28,11 @@ public class RestaurantController {
 
 	private FileService fileService;
 	private RestaurantService restaurantService;
-	private ReviewService reviewService;
 
-	public RestaurantController(FileService fileService, RestaurantService restaurantService,
-			ReviewService reviewService) {
+	public RestaurantController(FileService fileService, RestaurantService restaurantService) {
 		super();
 		this.fileService = fileService;
 		this.restaurantService = restaurantService;
-		this.reviewService = reviewService;
 	}
 
 	@GetMapping("/restaurants/{restaurantId}")
@@ -79,9 +76,9 @@ public class RestaurantController {
 		return reviewsContent;
 	}
 
-	@GetMapping("/process-csv")
-	public ResponseEntity<String> processCsv() {
-		fileService.readFile();
-		return ResponseEntity.ok("CSV processing successful!");
-	}
-}
+//	@GetMapping("/process-csv")
+//	public ResponseEntity<String> processCsv() {
+//		fileService.readFile();
+//		return ResponseEntity.ok("CSV processing successful!");
+//	}
+  }

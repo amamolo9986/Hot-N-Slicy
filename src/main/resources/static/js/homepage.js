@@ -1,5 +1,3 @@
-// JavaScript for Autocomplete Suggestions From Chat GPT - Figure Out What it Means Hahaha
-
 document.addEventListener('DOMContentLoaded', function () {
     var searchInput = document.getElementById('searchInput');
     var suggestionsDiv = document.getElementById('suggestions');
@@ -8,16 +6,16 @@ document.addEventListener('DOMContentLoaded', function () {
         var keyword = searchInput.value.trim();
         if (keyword !== '') {
             // Send request to get suggestions
-            var xhr = new XMLHttpRequest();
-            xhr.open('GET', '/restaurants/suggestions?keyword=' + encodeURIComponent(keyword), true);
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState === 4 && xhr.status === 200) {
+            var request = new XMLHttpRequest();
+            request.open('GET', '/restaurants/suggestions?keyword=' + encodeURIComponent(keyword), true);
+            request.onreadystatechange = function () {
+                if (request.readyState === 4 && request.status === 200) {
                     // Update suggestions div with received data
-                    var suggestions = JSON.parse(xhr.responseText);
+                    var suggestions = JSON.parse(request.responseText);
                     displaySuggestions(suggestions);
                 }
             };
-            xhr.send();
+            request.send();
         }
     });
 
@@ -33,8 +31,8 @@ document.addEventListener('DOMContentLoaded', function () {
             var isClickInsideSuggestions = suggestionsDiv.contains(event.target);
             var isClickInsideSearchInput = searchInput.contains(event.target);
 
-            if (!isClickInsideSuggestions && !isClickInsideSearchInput) {
-                suggestionsDiv.innerHTML = ''; // Hide the suggestion box
+            if (!isClickInsideSuggestions || !isClickInsideSearchInput) {
+                suggestionsDiv.innerHTML = ''; 
             }
         });
     }

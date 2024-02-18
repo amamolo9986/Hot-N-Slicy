@@ -23,6 +23,7 @@ function sendMessage() {
         .then(response => response.json())
         .then(data => {
             console.log('Review actually recieved:', data)
+            window.location.reload();
         });
 }
 

@@ -104,7 +104,7 @@ public class SecurityConfig {
 					    	
 					    	response.addCookie(accessTokenCookie);
 							response.addCookie(refreshTokenCookie);
-					    	response.sendRedirect("/homepage");
+							response.sendRedirect("/homepage");
 						}
 					})
 		        	.failureHandler(new AuthenticationFailureHandler() {

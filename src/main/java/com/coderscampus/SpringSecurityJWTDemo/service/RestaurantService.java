@@ -25,7 +25,8 @@ public class RestaurantService {
 	}
 	
 	public List<Restaurant> findByName(String keyword) {
-		return restaurantRepo.findByNameContainingIgnoreCase(keyword);
+		System.out.println(keyword);
+		return restaurantRepo.findRestaurantsUsingKeyword(keyword);
 	}
 
 

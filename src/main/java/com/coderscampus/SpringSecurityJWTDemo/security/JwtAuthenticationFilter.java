@@ -89,17 +89,17 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         				}
         			}
         		} catch (ExpiredJwtException e) {
-        			try {
-						token = refreshTokenService.createNewAccessToken(new RefreshTokenRequest(refreshTokenCookie.getValue()));
-						accessTokenCookie = CookieUtils.createAccessTokenCookie(token);
-						
-						response.addCookie(accessTokenCookie);
-						e.printStackTrace();
+        		    if (refreshTokenCookie != null) { 
+        		        try {
+        		            token = refreshTokenService.createNewAccessToken(new RefreshTokenRequest(refreshTokenCookie.getValue()));
+        		            accessTokenCookie = CookieUtils.createAccessTokenCookie(token);
+        		            response.addCookie(accessTokenCookie);
+        		            e.printStackTrace();
 					} catch (Exception e1) {
 						
 						e1.printStackTrace();
 					}
-        		}
+        		}}
         		loginAttempt++;
         	}
         }

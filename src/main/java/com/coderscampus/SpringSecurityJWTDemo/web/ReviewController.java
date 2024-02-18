@@ -36,9 +36,9 @@ public class ReviewController {
 		this.resRepository = resRepository;
 	}
 
-	@PostMapping("/restaurants/{id}")
+	@PostMapping("/restaurants/{restaurantId}")
 	@ResponseBody
-	public Review postMessage(@RequestBody Review review, @PathVariable("id") Integer id)
+	public Review postMessage(@RequestBody Review review, @PathVariable("restaurantId") Integer id)
 			throws IllegalAccessException, InvocationTargetException {
 		Optional<Restaurant> foundRestaurant = resRepository.findById(id);
 
@@ -77,11 +77,11 @@ public class ReviewController {
 		return "redirect:/users/profile";
 	}
 	
-//	@PostMapping("/users/profile/update")
-//	public String updateReview(@RequestParam("reviewId") Integer reviewId, 
-//							   @RequestParam("updatedReview") String updatedReview) {
-//	    reviewService.updateReview(reviewId, updatedReview);
-//	    return "redirect:/users/profile";
-//	}
+	@PostMapping("/users/profile/update")
+	public String updateReview(@RequestParam("reviewId") Integer reviewId, 
+							   @RequestParam("updatedReview") String updatedReview) {
+	    reviewService.updateReview(reviewId, updatedReview);
+	    return "redirect:/users/profile";
+	}
  
 }
