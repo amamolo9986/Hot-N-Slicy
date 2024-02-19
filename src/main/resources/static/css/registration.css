@@ -1,9 +1,15 @@
 body {
   font-family: 'JetBrains Mono';
   background-color: white;
+  background-image: url("/images/background.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center bottom;
+  background-size: 1500px;
 }
 
 .container {
+  opacity: .9;
   width: 350px;
   padding: 16px;
   background-color: #f7f7f7;

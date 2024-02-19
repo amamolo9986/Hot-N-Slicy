@@ -4,8 +4,21 @@ body{
     font-family: 'JetBrains Mono'; 
     color: white;
     background-color: white;
+    background-image: url("/images/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center bottom;
+    background-size: 1500px;
+}
+#title {
+    color: #C84C4C;
+    text-size-adjust: 34px;
+    margin-left: 30px;
+    margin-top: 15px;
+    font-size: xx-large;
 }
 #header {
+    height: 80px;
     padding-top: .5em;
 	padding-bottom: .5em;
 	border: 1px solid #a2a2a2;
@@ -39,8 +52,10 @@ body{
 #box{
     display: grid;
     justify-content: center;
+    margin-top: 50px;
 }
 #review-box {
+    opacity: .9;
     padding-top: .5em;
 	padding-bottom: .5em;
 	border: 1px solid #a2a2a2;
@@ -57,6 +72,7 @@ body{
     padding: 10px; 
 }
 #message-input{
+    opacity: .95;
     -webkit-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
 	-moz-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
 	box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);

@@ -17,7 +17,7 @@
 
 <body>
     <div id="header">
-        <h1 style="color: #C84C4C; margin: 30px;">Hot 'N Slicy</h1>
+        <div id="title">Hot 'N Slicy</div>
         <div>
             <a th:href="@{/users/profile}" id="profileLink">Profile</a>
             <a href="/logout" method="post" id="logoutLink">Logout</a>
@@ -25,7 +25,7 @@
     </div>
 
     <form id="searchForm" action="/restaurants/search" method="get">
-        <input type="text" id="searchInput" name="keyword" placeholder="Search your pizza *" th:value="${keyword}">
+        <input type="text" id="searchInput" name="keyword" placeholder="Search your pizza here *" th:value="${keyword}">
         <button class="search-button" type="submit">Search</button>
         <div id="suggestions"></div>
     </form>
