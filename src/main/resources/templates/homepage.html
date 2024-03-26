@@ -21,6 +21,11 @@
         <div>
             <a th:href="@{/users/profile}" id="profileLink">Profile</a>
             <a href="/logout" method="post" id="logoutLink">Logout</a>
+
+            <!-- <div th:if="${#authorization.isUserInRole('ADMIN')}">
+                <a th:href="@{/admin/dashboard}" >View All Users</a>
+            </div> -->
+
         </div>
     </div>
 

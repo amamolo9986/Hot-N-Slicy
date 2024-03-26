@@ -1,6 +1,6 @@
 body {
   font-family: 'JetBrains Mono';
-  background-color: white;
+  background-color: rgb(0, 0, 0);
   background-image: url("/images/background.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -12,13 +12,11 @@ body {
   opacity: .9;
   width: 350px;
   padding: 16px;
-  background-color: #f7f7f7;
+  background-color: #000000;
   margin: 0 auto;
   margin-top: 200px;
-  border: 2px solid black;
-  -webkit-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+  border: 2px solid rgb(255, 255, 255);
+  box-shadow: 0px 0px 2px 0px rgba(255, 255, 255, 0.75);
   border-radius: 2px;
 }
 
@@ -31,17 +29,16 @@ input[type=password] {
   box-sizing: border-box;
   font-family: 'JetBrains Mono';
   border: 1px solid #a2a2a2;
-  background-color: #ffffff;
-  -webkit-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+  background-color: #000000;
+  color: white;
+  box-shadow: 0px 0px 2px 0px rgba(255, 255, 255, 0.75);
   border-radius: 2px;
 }
 
 button {
-  border: 1px black solid;
-  background-color: black;
-  color: white;
+  border: 1px rgb(255, 255, 255) solid;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
@@ -51,7 +48,6 @@ button {
 }
 
 button:hover {
-  border: 1px black solid;
-  background: white;
-  color: black;
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
 }

@@ -2,7 +2,7 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'JetBrains Mono'; 
-    background-color: white;
+    background-color: rgb(0, 0, 0);
     background-image: url("/images/background.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -20,11 +20,9 @@ body{
     height: 80px;
     padding-top: .5em;
 	padding-bottom: .5em;
-	border: 1px solid #a2a2a2;
-	background-color: #f4f4f4;
-	-webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
-	-moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
-	box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	border-bottom: 1px solid #a2a2a2;
+	background-color: #000000;
+	box-shadow: 0px 0px 14px 0px rgba(255, 255, 255, 0.75);
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
@@ -34,7 +32,7 @@ body{
 }
 #homepageLink{
     margin-right: 30px;
-    color: black;
+    color: rgb(255, 255, 255);
     text-decoration: none;
 }
 #homepageLink:hover{
@@ -48,16 +46,14 @@ body{
 }
 #review-box {
     opacity: .95;
-    height: 120px; 
+    height: auto; 
     width: 600px;
     overflow-y: auto;
     padding-top: .5em;
 	padding-bottom: .5em;
 	border: 1px solid #a2a2a2;
-	background-color: #f7f7f7;
-	-webkit-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
-	-moz-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
-	box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+	background-color: #000000f5;
+	box-shadow: 0px 0px 2px 0px rgba(251, 251, 251, 0.889);
 	-webkit-border-radius: 1px;
 	-moz-border-radius: 1px;
 	border-radius: 1px;
@@ -69,7 +65,7 @@ body{
     align-items: end;
 }
 #deleteButton{
-    border: 1px black solid;
+    border: 1px rgb(255, 255, 255) solid;
     margin-top: 10px;
     font-family: 'JetBrains Mono'; 
     background-color: black;
@@ -94,23 +90,22 @@ body{
     align-items: flex-end;
 }
 #updateInput{
+    opacity: .95;
     width: 300px;
     border: 1px solid #a2a2a2;
-    background-color: #f7f7f7;
-    -webkit-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.75);
-	-moz-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.75);
+    background-color: #000000;
+    color: white;
 	box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.75);
     border-radius: 2px;
 }
 #updateButton{
-    border: 1px black solid;
+    border: 1px rgb(255, 255, 255) solid;
     font-family: 'JetBrains Mono'; 
     background-color: black;
     color: white;
     cursor: pointer;
 }
 #updateButton:hover{
-    background-color: white;
-    color: black;
-    border: 1px black solid;
+    background-color: rgb(67, 150, 69);
+    border: 1px rgb(67, 150, 69) solid;
 }
