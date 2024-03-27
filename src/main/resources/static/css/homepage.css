@@ -25,8 +25,6 @@ body {
     border-bottom: 1px solid #a2a2a2;
 	background-color: #000000;
 	box-shadow: 0px 0px 14px 0px rgba(255, 255, 255, 0.75);
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
 	border-radius: 5px;
     display: flex;
     justify-content: space-between;
@@ -63,9 +61,9 @@ body {
     font-family: 'JetBrains Mono';
     font-size: large;
     border: 1px solid #a2a2a2;
-    background-color: #000000;
+    background-color: #000000e0;
     color: white;
-    box-shadow: 0px 0px 2px 0px rgba(255, 255, 255, 0.75);
+    box-shadow: 0px 0px 2px 0px rgba(255, 255, 255, 0.887);
     border-radius: 2px;
     margin-top: 100px;
     margin-left: 30px;
@@ -99,7 +97,7 @@ body {
 
 .search-button {
     font-family: 'JetBrains Mono';
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.898);
     color: white;
     border: 1px rgb(255, 255, 255) solid;
     cursor: pointer;
@@ -108,7 +106,7 @@ body {
 }
 
 .search-button:hover {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.917);
     color: black;
     border: 1px rgb(255, 255, 255) solid;
 }

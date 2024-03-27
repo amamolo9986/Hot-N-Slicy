@@ -8,33 +8,35 @@
 
 <body>
 
-  <div class="container">
-    <h2 style="color: #C84C4C;">Registration Form</h2>
-    <form th:object="${user}" th:action="@{/register}" method="post" enctype="application/x-www-form-urlencoded"
-      id="registrationForm">
+  <div class="container--wrapper">
+    <div class="container">
+      <h2 style="color: #C84C4C;">Registration Form</h2>
+      <form th:object="${user}" th:action="@{/register}" method="post" enctype="application/x-www-form-urlencoded"
+        id="registrationForm">
 
-      <label for="firstName" style="color: rgb(255, 255, 255);"><b>First Name</b></label>
-      <input type="text" placeholder="Enter First Name *" th:field="*{firstName}" name="firstName" class="required"
-        required>
+        <label for="firstName" style="color: rgb(255, 255, 255);"><b>First Name</b></label>
+        <input type="text" placeholder="Enter First Name *" th:field="*{firstName}" name="firstName" class="required"
+          required>
 
-      <label for="lastName" style="color: rgb(255, 255, 255);"><b>Last Name</b></label>
-      <input type="text" placeholder="Enter Last Name *" th:field="*{lastName}" name="lastName" class="required"
-        required>
+        <label for="lastName" style="color: rgb(255, 255, 255);"><b>Last Name</b></label>
+        <input type="text" placeholder="Enter Last Name *" th:field="*{lastName}" name="lastName" class="required"
+          required>
 
-      <label for="email" style="color: rgb(255, 255, 255);"><b>Email</b></label>
-      <input type="text" placeholder="Enter Email *" th:field="*{email}" name="email" class="required" required>
+        <label for="email" style="color: rgb(255, 255, 255);"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email *" th:field="*{email}" name="email" class="required" required>
 
-      <label for="password" style="color: rgb(255, 255, 255);"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password *" th:field="*{password}" name="password" id="password"
-        class="required" required>
+        <label for="password" style="color: rgb(255, 255, 255);"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password *" th:field="*{password}" name="password" id="password"
+          class="required" required>
 
-      <label for="confirmPassword" style="color: rgb(255, 255, 255);"><b>Confirm Password</b></label>
-      <input type="password" placeholder="Confirm Password *" name="confirmPassword" id="confirmPassword"
-        class="required" required>
-        
-      <div id="passwordMatchMessage" style="color: red;"></div>
-      <button type="submit" style="border: 2px solid rgb(255, 255, 255);">Register</button>
-    </form>
+        <label for="confirmPassword" style="color: rgb(255, 255, 255);"><b>Confirm Password</b></label>
+        <input type="password" placeholder="Confirm Password *" name="confirmPassword" id="confirmPassword"
+          class="required" required>
+
+        <div id="passwordMatchMessage" style="color: red;"></div>
+        <button type="submit" style="border: 2px solid rgb(255, 255, 255);">Register</button>
+      </form>
+    </div>
   </div>
 
   <script th:inline="javascript" type="text/javascript" src="/js/registration.js"></script>

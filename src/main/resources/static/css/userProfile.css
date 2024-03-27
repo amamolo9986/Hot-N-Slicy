@@ -1,7 +1,7 @@
-body{
+body {
     margin: 0;
     padding: 0;
-    font-family: 'JetBrains Mono'; 
+    font-family: 'JetBrains Mono';
     background-color: rgb(0, 0, 0);
     background-image: url("/images/background.jpg");
     background-repeat: no-repeat;
@@ -9,6 +9,7 @@ body{
     background-position: center bottom;
     background-size: 1500px;
 }
+
 #title {
     color: #C84C4C;
     text-size-adjust: 34px;
@@ -16,35 +17,211 @@ body{
     margin-top: 15px;
     font-size: xx-large;
 }
+
 #header {
     height: 80px;
     padding-top: .5em;
-	padding-bottom: .5em;
-	border-bottom: 1px solid #a2a2a2;
-	background-color: #000000;
-	box-shadow: 0px 0px 14px 0px rgba(255, 255, 255, 0.75);
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
+    padding-bottom: .5em;
+    border-bottom: 1px solid #a2a2a2;
+    background-color: #000000;
+    box-shadow: 0px 0px 14px 0px rgba(255, 255, 255, 0.75);
+    border-radius: 5px;
     display: flex;
     justify-content: space-between;
-    align-items: baseline; 
+    align-items: baseline;
 }
-#homepageLink{
+
+#homepageLink {
     margin-right: 30px;
     color: rgb(255, 255, 255);
     text-decoration: none;
 }
-#homepageLink:hover{
+
+#homepageLink:hover {
     text-decoration: underline;
 }
-#box{
+
+#box {
     display: grid;
     justify-content: center;
     align-items: end;
     margin-top: 100px;
 }
+
+#review-box,
+#review-box--wrapper {
+    clip-path: polygon(0px calc(100% - 20px),
+            4px calc(100% - 20px),
+            4px calc(100% - 12px),
+            8px calc(100% - 12px),
+            8px calc(100% - 8px),
+            12px calc(100% - 8px),
+            12px calc(100% - 4px),
+            20px calc(100% - 4px),
+            20px 100%,
+            calc(100% - 20px) 100%,
+            calc(100% - 20px) calc(100% - 4px),
+            calc(100% - 12px) calc(100% - 4px),
+            calc(100% - 12px) calc(100% - 8px),
+            calc(100% - 8px) calc(100% - 8px),
+            calc(100% - 8px) calc(100% - 12px),
+            calc(100% - 4px) calc(100% - 12px),
+            calc(100% - 4px) calc(100% - 20px),
+            100% calc(100% - 20px),
+            100% 20px,
+            calc(100% - 4px) 20px,
+            calc(100% - 4px) 12px,
+            calc(100% - 8px) 12px,
+            calc(100% - 8px) 8px,
+            calc(100% - 12px) 8px,
+            calc(100% - 12px) 4px,
+            calc(100% - 20px) 4px,
+            calc(100% - 20px) 0px,
+            20px 0px,
+            20px 4px,
+            12px 4px,
+            12px 8px,
+            8px 8px,
+            8px 12px,
+            4px 12px,
+            4px 20px,
+            0px 20px);
+    position: relative;
+
+    opacity: .95;
+    height: auto; 
+    padding-top: .5em;
+	padding-bottom: .5em;
+	border: 1px solid #a2a2a2;
+	background-color: #000000f5;
+	box-shadow: 0px 0px 2px 0px rgba(251, 251, 251, 0.889);
+	border-radius: 1px;
+    padding: 10px;
+    width: 700px;
+}
+
 #review-box {
+    border: 4px solid transparent;
+}
+
+#review-box--wrapper #review-box {
+    display: table-cell;
+    clip-path: polygon(4px 20px,
+            8px 20px,
+            8px 12px,
+            12px 12px,
+            12px 8px,
+            20px 8px,
+            20px 4px,
+            calc(100% - 20px) 4px,
+            calc(100% - 20px) 8px,
+            calc(100% - 12px) 8px,
+            calc(100% - 12px) 12px,
+            calc(100% - 8px) 12px,
+            calc(100% - 8px) 20px,
+            calc(100% - 4px) 20px,
+            calc(100% - 4px) calc(100% - 20px),
+            calc(100% - 8px) calc(100% - 20px),
+            calc(100% - 8px) calc(100% - 12px),
+            calc(100% - 12px) calc(100% - 12px),
+            calc(100% - 12px) calc(100% - 8px),
+            calc(100% - 20px) calc(100% - 8px),
+            calc(100% - 20px) calc(100% - 4px),
+            20px calc(100% - 4px),
+            20px calc(100% - 8px),
+            12px calc(100% - 8px),
+            12px calc(100% - 12px),
+            8px calc(100% - 12px),
+            8px calc(100% - 20px),
+            4px calc(100% - 20px));
+}
+
+#review-box::after,
+#review-box--wrapper::after {
+    content: "";
+    position: absolute;
+    clip-path: polygon(0px calc(100% - 20px),
+            4px calc(100% - 20px),
+            4px calc(100% - 12px),
+            8px calc(100% - 12px),
+            8px calc(100% - 8px),
+            12px calc(100% - 8px),
+            12px calc(100% - 4px),
+            20px calc(100% - 4px),
+            20px 100%,
+            calc(100% - 20px) 100%,
+            calc(100% - 20px) calc(100% - 4px),
+            calc(100% - 12px) calc(100% - 4px),
+            calc(100% - 12px) calc(100% - 8px),
+            calc(100% - 8px) calc(100% - 8px),
+            calc(100% - 8px) calc(100% - 12px),
+            calc(100% - 4px) calc(100% - 12px),
+            calc(100% - 4px) calc(100% - 20px),
+            100% calc(100% - 20px),
+            100% 20px,
+            calc(100% - 4px) 20px,
+            calc(100% - 4px) 12px,
+            calc(100% - 8px) 12px,
+            calc(100% - 8px) 8px,
+            calc(100% - 12px) 8px,
+            calc(100% - 12px) 4px,
+            calc(100% - 20px) 4px,
+            calc(100% - 20px) 0px,
+            20px 0px,
+            20px 4px,
+            12px 4px,
+            12px 8px,
+            8px 8px,
+            8px 12px,
+            4px 12px,
+            4px 20px,
+            0px 20px,
+            0px 50%,
+            4px 50%,
+            4px 20px,
+            8px 20px,
+            8px 12px,
+            12px 12px,
+            12px 8px,
+            20px 8px,
+            20px 4px,
+            calc(100% - 20px) 4px,
+            calc(100% - 20px) 8px,
+            calc(100% - 12px) 8px,
+            calc(100% - 12px) 12px,
+            calc(100% - 8px) 12px,
+            calc(100% - 8px) 20px,
+            calc(100% - 4px) 20px,
+            calc(100% - 4px) calc(100% - 20px),
+            calc(100% - 8px) calc(100% - 20px),
+            calc(100% - 8px) calc(100% - 12px),
+            calc(100% - 12px) calc(100% - 12px),
+            calc(100% - 12px) calc(100% - 8px),
+            calc(100% - 20px) calc(100% - 8px),
+            calc(100% - 20px) calc(100% - 4px),
+            20px calc(100% - 4px),
+            20px calc(100% - 8px),
+            12px calc(100% - 8px),
+            12px calc(100% - 12px),
+            8px calc(100% - 12px),
+            8px calc(100% - 20px),
+            4px calc(100% - 20px),
+            4px 50%,
+            0px 50%);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    display: block;
+    pointer-events: none;
+}
+
+#review-box::after {
+    margin: -4px;
+}
+
+/* #review-box {
     opacity: .95;
     height: auto; 
     width: 600px;
@@ -54,58 +231,64 @@ body{
 	border: 1px solid #a2a2a2;
 	background-color: #000000f5;
 	box-shadow: 0px 0px 2px 0px rgba(251, 251, 251, 0.889);
-	-webkit-border-radius: 1px;
-	-moz-border-radius: 1px;
 	border-radius: 1px;
     padding: 10px; 
-}
-#buttonPosition{
+} */
+#buttonPosition {
     display: grid;
     justify-content: flex-end;
     align-items: end;
 }
-#deleteButton{
+
+#deleteButton {
     border: 1px rgb(255, 255, 255) solid;
     margin-top: 10px;
-    font-family: 'JetBrains Mono'; 
+    font-family: 'JetBrains Mono';
     background-color: black;
     color: white;
     cursor: pointer;
 }
-#deleteButton:hover{
+
+#deleteButton:hover {
     background-color: #C84C4C;
     border: 1px #C84C4C solid;
 }
-#rrURL{
+
+#rrURL {
     color: #C84C4C;
     text-decoration: none;
 }
-#rrURL:hover{
+
+#rrURL:hover {
     text-decoration: underline;
 }
-#updateForm{
+
+#updateForm {
     margin-top: 30px;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
 }
-#updateInput{
+
+#updateInput {
     opacity: .95;
     width: 300px;
     border: 1px solid #a2a2a2;
     background-color: #000000;
     color: white;
-	box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.75);
     border-radius: 2px;
 }
-#updateButton{
+
+#updateButton {
     border: 1px rgb(255, 255, 255) solid;
-    font-family: 'JetBrains Mono'; 
+    font-family: 'JetBrains Mono';
     background-color: black;
     color: white;
     cursor: pointer;
 }
-#updateButton:hover{
+
+#updateButton:hover {
     background-color: rgb(67, 150, 69);
     border: 1px rgb(67, 150, 69) solid;
 }
