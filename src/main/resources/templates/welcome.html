@@ -9,32 +9,32 @@
 <body>
     <div id="container">
         <div class="title-box--wrapper">
-                <div class="title">HOT ‘N SLICY</div>
-                <div class="sub-title">A WEBSITE FOR PIZZA</div>
+            <div class="title">HOT ‘N SLICY</div>
+            <div class="sub-title">A WEBSITE FOR PIZZA</div>
         </div>
         <div class="divider"></div>
         <div class="action-box--wrapper">
-            <div class="action-box">
+            <div>
+                <a th:href="@{/signin}">
+                    <button class="signin-button" type="button">Sign-In</button>
+                </a>
+                <a th:href="@{/register}">
+                    <button class="register-button" type="button">Register</button>
+                </a>
             </div>
         </div>
+
         <div class="instagram-facebook-blog">
             Instagram&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Facebook&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Blog
         </div>
+
         <div class="helpcenter-termsofservice-licenses">
             Center&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Terms of Service&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Licenses
         </div>
+
         <div class="tag-line">The average person eats 46 slices of <br />
             pizza per year. Why not rate them?</div>
-        <div>
-            <a th:href="@{/signin}">
-                <button class="signin-button" type="button">Sign-In</button>
-            </a>
-        </div>
-        <div>
-            <a th:href="@{/register}">
-                <button class="register-button" type="button">Register</button>
-            </a>
-        </div>
+
     </div>
 </body>
 

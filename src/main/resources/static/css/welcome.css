@@ -468,9 +468,8 @@ body {
 }
 
 .signin-button {
-    left: 918px;
-    top: 307px;
-    position: absolute;
+  margin-left: 68px;
+  margin-top: 39px;
     text-align: center;
     font-size: 15px;
     font-family: 'JetBrains Mono';
@@ -491,9 +490,8 @@ body {
 }
 
 .register-button {
-    left: 918px;
-    top: 353px;
-    position: absolute;
+  margin-left: 68px;
+  margin-top: 20px;
     text-align: center;
     font-size: 16px;
     font-family: 'JetBrains Mono';
