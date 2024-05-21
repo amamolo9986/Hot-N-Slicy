@@ -11,6 +11,6 @@ public interface RestaurantRepository extends JpaRepository<Restaurant, Integer>
 
 //	List<Restaurant> findByNameContainingIgnoreCase(String keyword); 
 
-	@Query("SELECT r FROM Restaurant r WHERE LOWER(r.name) LIKE %:keyword%")
+	@Query("select r from Restaurant r where lower(r.name) like %:keyword%")
 	List<Restaurant> findRestaurantsUsingKeyword(String keyword);
 }
